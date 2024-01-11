@@ -1,31 +1,23 @@
-//
-//  ViewController.swift
-//  Counter
-//
-//  Created by Виталий Гамбург on 10.01.2024.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var LabelCounter: UILabel!
+    @IBOutlet private weak var counterLabel: UILabel!
     
-    var LabelCounterString = "Значение счётчика:"
+    private var counterStringLabel = "Значение счётчика:"
     
-    var LabelCounterInt = 0
+    private var counterIntLabel = 0
     
-    @IBOutlet weak var ButtonCounter: UIButton!
+    @IBOutlet private weak var counterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
-    @IBAction private func PressButtonCouner(_ sender: Any) {
-        LabelCounterInt += 1
-        if LabelCounterInt >= 0 {
-            LabelCounter.text = "\(LabelCounterString) \(String(LabelCounterInt))"
+    @IBAction private func pressButtonCounter(_ sender: Any) {
+        counterIntLabel += 1
+        if counterIntLabel >= 0 {
+            counterLabel.text = "\(counterStringLabel) \(String(counterIntLabel))"
         }
     }
 }
